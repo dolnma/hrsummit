@@ -1,0 +1,41 @@
+$rem-base: $font-base;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+
+@mixin break($breakpoint) {
+@if map-has-key($breakpoints, $breakpoint) {
+  @media (min-width: #{ map-get( $breakpoints, $breakpoint ) }) {
+    @content;
+  }
+}
+
+@else if type_of($breakpoint)==number and unit($breakpoint)==px or unit($breakpoint)==em or unit($breakpoint)==rem {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@else {
+  @warn "No value could be retrieved from `#{$breakpoint}`. "
+    +"It is either not defined in the `$breakpoints` map, or it is an invalid number of px, em, or rem.";
+}
+}
