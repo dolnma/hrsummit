@@ -3,6 +3,7 @@ import './polyfill-ie11'
 import $ from 'jquery'
 import jQuery from 'jquery'
 import lozad from 'lozad'
+import './events'
 
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();

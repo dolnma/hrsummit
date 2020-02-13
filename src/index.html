@@ -450,11 +450,9 @@
 
             <ul class="program-nav">
                 <li><a href="javascript:void(0)" data-tab="1" id="tab1-top"
-                       onClick="$('#tab1-bottom').addClass('active');$('#tab2-bottom').removeClass('active');"
                        class="active">Dopolední blok</a></li>
 
                 <li><a href="javascript:void(0)" id="tab2-top"
-                       onClick="$('#tab2-bottom').addClass('active');$('#tab1-bottom').removeClass('active');"
                        data-tab="2">Odpolední blok</a></li>
             </ul>
 
@@ -605,13 +603,8 @@
             </div>
 
             <ul class="program-nav2">
-                <li><a href="javascript:void(0)" id="tab1-bottom" class="active"
-                       onClick="$('#tab1-top').trigger('click');var position = $('#program').position();window.scrollTo(0,position.top - $('#main-header').height());">Dopolední
-                    blok</a></li><!--
-    -->
-                <li><a href="javascript:void(0)" id="tab2-bottom"
-                       onClick="$('#tab2-top').trigger('click');var position = $('#program').position();window.scrollTo(0,position.top - $('#main-header').height());">Odpolední
-                    blok</a></li>
+                <li><a href="javascript:void(0)" id="tab1-bottom" class="active">Dopolední blok</a></li>
+                <li><a href="javascript:void(0)" id="tab2-bottom">Odpolední blok</a></li>
             </ul>
 
         </div>
