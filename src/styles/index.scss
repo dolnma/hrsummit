@@ -1,8 +1,8 @@
-@import "~normalize.css";
+//@import "~normalize.css";
 //@import "~reset-css";
 @import "variables";
 @import "_mixins/rem-calc";
 
 @import "atoms/fonts";
 
-@import "pages/homepage.css";
+@import "pages/homepage.scss";

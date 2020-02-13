@@ -225,6 +225,9 @@ button {
 #home {
     background: url('../../images/home.jpg') no-repeat center top;
     background-size: cover;
+    @media screen and (min-width: 992px) {
+        background-size: contain;
+    }
 }
 
 #intro {
@@ -239,7 +242,7 @@ button {
 
 #slogan {
     height: 98px;
-    margin-top: 725px;
+    margin-top: 540px;
     margin-bottom: 200px;
 }
 
@@ -260,7 +263,8 @@ button {
 }
 
 #prednasejici {
-    background: url('../../images/speakers.jpg') no-repeat center center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     padding-bottom: 120px;
@@ -594,7 +598,8 @@ p.profil-program span {
 }
 
 #vstupenka {
-    background: url('../../images/ticket.jpg') no-repeat center center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 145px;
     margin-top: 75px;
@@ -792,7 +797,8 @@ p.profil-program span {
 }
 
 #place {
-    background: url('../../images/place.jpg') no-repeat center center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding: 100px 0;
