@@ -349,6 +349,15 @@ button {
     background: url('../../images/speaker-bg-3.png') right top repeat;
 }
 
+.speaker-info {
+    @media screen and (min-width: 480px) and (max-width: 1000px) {
+        min-height: 200px;
+    }
+    @media screen and (min-width: 1001px) {
+        min-height: 160px;
+    }
+}
+
 .profil {
     position: fixed;
     left: 50%;
