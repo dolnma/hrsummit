@@ -225,7 +225,11 @@ button {
 #home {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-color: #FFBB00;
+  background-size: contain;
+  @media screen and (min-width: 576px) {
+    background-size: cover;
+  }
   @media screen and (min-width: 992px) {
     background-size: contain;
   }
@@ -244,7 +248,7 @@ button {
 #slogan {
   height: 98px;
   margin-top: 540px;
-  margin-bottom: 200px;
+  //margin-bottom: 200px;
 }
 
 #o-summitu {
@@ -1365,7 +1369,7 @@ p.profil-program span {
   #slogan {
     width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
   }
 
 
@@ -2020,16 +2024,6 @@ button {
   display: none;
 }
 
-#home {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #FFBB00;
-  background-size: cover;
-  @media screen and (min-width: 992px) {
-    background-size: contain;
-  }
-}
-
 #intro {
   min-height: 100vh;
 }
@@ -2043,12 +2037,16 @@ button {
 #slogan {
   height: 98px;
   margin-top: 540px;
-  margin-bottom: 200px;
+  //margin-bottom: 200px;
 }
 
 #o-summitu {
   text-align: center;
-  padding-bottom: 100px;
+  background: rgb(255,187,0);
+  background: linear-gradient(0deg, rgba(255,187,0,1) 85%, rgba(251,180,59,0) 100%);
+  @include break(lg) {
+    padding-bottom: 100px;
+  }
 }
 
 #o-summitu h1 {
