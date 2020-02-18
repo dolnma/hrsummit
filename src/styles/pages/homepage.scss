@@ -247,7 +247,7 @@ button {
 
 #slogan {
   height: 98px;
-  margin-top: 540px;
+  margin-top: 580px;
   //margin-bottom: 200px;
 }
 
@@ -356,7 +356,7 @@ button {
 
 .speaker-info {
   @media screen and (min-width: 480px) and (max-width: 1000px) {
-    min-height: 200px;
+    min-height: 210px;
   }
   @media screen and (min-width: 1001px) {
     min-height: 180px;
@@ -499,7 +499,11 @@ p.profil-program span {
 }
 
 .program-nav2 {
-  text-align: center;
+  display: flex;
+  @include break(sm) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .program-nav2 li {
@@ -514,10 +518,13 @@ p.profil-program span {
   color: #000;
   text-decoration: none;
   text-align: center;
-  width: 200px;
+  width: 100%;
   border: 2px solid #FFB900;
   display: block;
   line-height: 51px;
+  @include break(sm) {
+    width: 200px;
+  }
 }
 
 .program-nav2 li + li a {
@@ -669,7 +676,7 @@ p.profil-program span {
 .buy {
   transition: background 0.3s, width 0.2s;
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
   background: #06AD49;
   display: block;
   margin: 0 auto;
@@ -685,111 +692,6 @@ p.profil-program span {
 .buy:hover {
   background: #000;
   width: 220px;
-}
-
-#buy-ticket-form {
-  position: fixed;
-  left: 50%;
-  display: none;
-  max-height: 470px;
-  overflow: auto;
-  border: 2px solid #000;
-  padding: 45px;
-  margin-left: -427px;
-  width: 760px;
-  background: #fff;
-  z-index: 1001;
-  top: 100px;
-  bottom: 50px;
-  background: #fff;
-}
-
-#buy-ticket-form.plussize {
-  max-height: 605px;
-}
-
-#buy-ticket-form h1 {
-  margin-bottom: 15px;
-}
-
-#buy-ticket-form .row {
-  width: 100%;
-  overflow: hidden;
-  margin-left: 1px;
-  padding-bottom: 10px;
-}
-
-#buy-ticket-form label {
-  font-size: 16px;
-  padding: 15px 0 3px 0;
-}
-
-#buy-ticket-form .row-2 label {
-  width: 50%;
-  float: left;
-}
-
-#buy-ticket-form .row-3 label {
-  width: 33.33%;
-  float: left;
-}
-
-#buy-ticket-form input {
-  transition: border 0.2s;
-  box-sizing: border-box;
-  outline: none;
-  border: 2px solid #C5C5C5;
-  padding: 10px;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  color: #000;
-  font-weight: 400;
-}
-
-#buy-ticket-form input + input { /*border-left: none;*/
-  margin-left: -2px;
-}
-
-#buy-ticket-form input:focus {
-  border-color: #252525;
-  z-index: 99;
-  position: relative;
-}
-
-#buy-ticket-form .row-2 input {
-  width: 50%;
-  float: left;
-}
-
-#buy-ticket-form .row-3 input {
-  width: 33.33%;
-  float: left;
-}
-
-#buy-ticket-form #company-data .row {
-  display: none;
-}
-
-#buy-ticket-form #company-data-show {
-  color: #000;
-  font-size: 16px;
-  display: inline-block;
-  padding: 10px 0 15px 0;
-  text-decoration: underline;
-}
-
-#buy-ticket-form #company-data-show:hover {
-  text-decoration: none;
-}
-
-#buy-ticket-form button {
-  border: 0;
-  text-decoration: none;
-  width: 300px;
-}
-
-#buy-ticket-form button:hover {
-  width: 330px;
 }
 
 #buy-ticket-form-close {
@@ -2036,7 +1938,7 @@ button {
 
 #slogan {
   height: 98px;
-  margin-top: 540px;
+  margin-top: 580px;
   //margin-bottom: 200px;
 }
 
@@ -2245,7 +2147,11 @@ p.profil-program span {
 }
 
 .program-nav {
-  text-align: center;
+  display: flex;
+  @include break(sm) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .program-nav li {
@@ -2276,42 +2182,6 @@ p.profil-program span {
 }
 
 .program-nav li a.active {
-  background: #FFB900;
-  color: #fff;
-}
-
-.program-nav2 {
-  text-align: center;
-}
-
-.program-nav2 li {
-  display: inline-block;
-}
-
-.program-nav2 li a {
-  transition: background 0.2s;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000;
-  text-decoration: none;
-  text-align: center;
-  width: 200px;
-  border: 2px solid #FFB900;
-  display: block;
-  line-height: 51px;
-}
-
-.program-nav2 li + li a {
-  margin-left: -2px;
-}
-
-.program-nav2 li a:hover {
-  background: #FFD566;
-  color: #000;
-}
-
-.program-nav2 li a.active {
   background: #FFB900;
   color: #fff;
 }
@@ -2446,22 +2316,6 @@ p.profil-program span {
   display: block;
 }
 
-.buy {
-  transition: background 0.3s, width 0.2s;
-  color: #fff;
-  text-decoration: underline;
-  background: #06AD49;
-  display: block;
-  margin: 0 auto;
-  width: 190px;
-  text-align: center;
-  line-height: 61px;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
 .buy:hover {
   background: #000;
   width: 220px;
@@ -2471,7 +2325,6 @@ p.profil-program span {
   position: fixed;
   left: 50%;
   display: none;
-  max-height: 470px;
   overflow: auto;
   border: 2px solid #000;
   padding: 45px;
@@ -2480,7 +2333,6 @@ p.profil-program span {
   background: #fff;
   z-index: 1001;
   top: 100px;
-  bottom: 50px;
   background: #fff;
 }
 
@@ -3133,3 +2985,11 @@ p.profil-program span {
     bottom: 40px;
   }
 }
+
+.program-nav li a, .program-nav2 li a {
+  font-size: 12px;
+  @include break(sm) {
+    font-size: 16px;
+  }
+}
+
