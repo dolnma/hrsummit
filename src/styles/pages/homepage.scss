@@ -317,19 +317,6 @@ button {
   padding: 15px 0 0 0;
 }
 
-.speaker p {
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 20px;
-  height: 60px;
-  text-align: center;
-  padding: 5px 15px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .speaker a {
   display: block;
   text-transform: uppercase;
@@ -355,6 +342,9 @@ button {
 }
 
 .speaker-info {
+  p {
+    text-align: center;
+  }
   @media screen and (min-width: 480px) and (max-width: 1000px) {
     min-height: 210px;
   }
@@ -2018,10 +2008,10 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 20px;
-  height: 60px;
+  height: auto;
   text-align: center;
   padding: 5px 15px;
-  display: table-cell;
+  display: block;
   vertical-align: middle;
 }
 
